@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dajohnso <dajohnso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 17:29:43 by dajohnso          #+#    #+#             */
-/*   Updated: 2026/01/20 17:45:32 by dajohnso         ###   ########.fr       */
+/*   Created: 2026/01/21 14:26:10 by dajohnso          #+#    #+#             */
+/*   Updated: 2026/01/21 14:41:52 by dajohnso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
-    char    letter;
+	char	number;
 
-    letter = 'a';
-    while (letter <= 'z')
-    {
-        write(1, &letter, 1);
-        letter++;
-    }
+	number = '0';
+	while (number <= '9')
+	{
+		write(1, &number, 1);
+		number++;
+	}
 }
 /*
 int main()
 {
-    ft_print_alphabet();
+    ft_print_numbers();
 }*/

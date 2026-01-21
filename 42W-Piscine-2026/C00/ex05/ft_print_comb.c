@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dajohnso <dajohnso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 17:29:43 by dajohnso          #+#    #+#             */
-/*   Updated: 2026/01/20 17:45:32 by dajohnso         ###   ########.fr       */
+/*   Created: 2026/01/21 14:48:15 by dajohnso          #+#    #+#             */
+/*   Updated: 2026/01/21 15:59:10 by dajohnso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_print_alphabet(void)
+void	ft_print_comb(void)
 {
-    char    letter;
+	char	*combo;
+	int		i;
 
-    letter = 'a';
-    while (letter <= 'z')
-    {
-        write(1, &letter, 1);
-        letter++;
-    }
+	combo = "012";
+	i = 2;
+	while (i >= 0)
+	{
+		while (combo[i - 1] < combo[i])
+		{
+			combo[i]++;
+			write(1, &combo, 3);
+			write(1, ", ", 2);
+			combo[i]++;
+		}
+		//if (combo == "789")
+		//	break ;
+		i--;
+	}
 }
-/*
-int main()
+
+int	main()
 {
-    ft_print_alphabet();
-}*/
+	ft_print_comb();
+}

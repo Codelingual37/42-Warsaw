@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dajohnso <dajohnso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 14:17:32 by dajohnso          #+#    #+#             */
-/*   Updated: 2026/01/21 14:18:21 by dajohnso         ###   ########.fr       */
+/*   Created: 2026/01/21 14:30:51 by dajohnso          #+#    #+#             */
+/*   Updated: 2026/01/21 14:37:29 by dajohnso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_is_negative(int n)
 {
-	write(1, &c, 1);
+	if (n >= 0)
+		write(1, "P", 1);
+	else
+		write(1, "N", 1);
 }
 /*
-int main()
+int		main()
 {
-    char    letter;
-
-    letter = 'c';
-    ft_putchar(letter);
+	ft_is_negative(1);
+	ft_is_negative(-1);
 }*/
