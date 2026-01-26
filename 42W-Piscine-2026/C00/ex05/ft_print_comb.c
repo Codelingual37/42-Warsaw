@@ -6,7 +6,7 @@
 /*   By: dajohnso <dajohnso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 14:48:15 by dajohnso          #+#    #+#             */
-/*   Updated: 2026/01/25 17:10:36 by dajohnso         ###   ########.fr       */
+/*   Updated: 2026/01/26 18:18:58 by dajohnso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,34 @@
 
 void	ft_print_comb(void)
 {
-	char	*combo;
+	char	combo[3];
+	char	*start;
 	int		i;
+	int		j;
+	int		end;
 
-	combo = "012";
-	i = 2;
-	while (i >= 0)
+	i = 0;
+	j = 2;
+	end = 9;
+	start = "012";
+	while (*start)
 	{
-		while (combo[i - 1] < combo[i])
+		combo[i] = *start;
+		start++;
+		i++;
+	}
+	while (j >= 0)
+	{
+		while (combo[j - 1] < combo[j] && combo[j] < end)
 		{
-			combo[i]++;
 			write(1, &combo, 3);
 			write(1, ", ", 2);
-			combo[i]++;
+			combo[j]++;
 		}
 		//if (combo == "789")
 		//	break ;
-		i--;
+		end--;
+		j--;
 	}
 }
 
