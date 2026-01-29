@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dajohnso <dajohnso@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/29 14:13:00 by dajohnso          #+#    #+#             */
+/*   Updated: 2026/01/29 14:13:02 by dajohnso         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int	quotient;
@@ -8,10 +20,8 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	*a = quotient;
 	*b = remainder;
 }
-
-#include <stdio.h>
-
 /*
+#include <stdio.h>
 int	main(void)
 {
 	int	a = 11;
