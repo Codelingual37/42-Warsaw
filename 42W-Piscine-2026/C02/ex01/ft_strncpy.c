@@ -6,18 +6,24 @@
 /*   By: dajohnso <dajohnso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 14:20:38 by dajohnso          #+#    #+#             */
-/*   Updated: 2026/01/29 14:21:23 by dajohnso         ###   ########.fr       */
+/*   Updated: 2026/02/02 15:14:18 by dajohnso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	while (*src != src[n - 1])
-		*dest++ = *src++;
-	*dest = '\0';
+	unsigned int	i;
+
+	i = 0;
+	while (i < n && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }
-
+/*
 #include <stdlib.h>
 #include <stdio.h>
 int	main(void)
@@ -33,4 +39,4 @@ int	main(void)
 	printf("%s %s\n", "The source string is:", src);
 	printf("%s %s\n", "The copied string is now:", dest);
 	free(dest);
-}
+}*/
