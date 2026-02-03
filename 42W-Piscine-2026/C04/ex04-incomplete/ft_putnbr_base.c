@@ -47,7 +47,8 @@ void	ft_putnbr_base(int nbr, char *base)
 		radix_no = ft_strlen(base);
 		while (nbr > 0)
 		{
-			digit = 
+			digit = nbr % radix_no;
+			nbr /= radix_no;
 		}
 	}
 }
