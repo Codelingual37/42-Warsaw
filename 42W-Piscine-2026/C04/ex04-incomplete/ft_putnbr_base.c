@@ -47,7 +47,9 @@ void	ft_putnbr_base(int nbr, char *base)
 		radix_no = ft_strlen(base);
 		while (nbr > 0)
 		{
-			digit = 
+			digit = nbr % radix_no;
+			nbr /= radix_no;
+			write(1, &base[digit], 1);
 		}
 	}
 }
@@ -63,6 +65,20 @@ int	main(void)
 	char	*err2 = "1";
 	char	*err3 = "test";
 	char	*err4 = "-base";
-
-
+	ft_putnbr_base(42, dec);
+	printf("\n");
+	ft_putnbr_base(42, hex);
+	printf("\n");
+	ft_putnbr_base(42, oct);
+	printf("\n");
+	ft_putnbr_base(42, bin);
+	printf("\n");
+	ft_putnbr_base(42, err1);
+	printf("\n");
+	ft_putnbr_base(42, err2);
+	printf("\n");
+	ft_putnbr_base(42, err3);
+	printf("\n");
+	ft_putnbr_base(42, err4);
 }
+//STILL NEEDS TO HANDLE NEGATIVE NUMBERS.
