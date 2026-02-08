@@ -16,17 +16,13 @@ char	*ft_strstr(char *str, char *to_find)
 
 	if (!*to_find)
 		return (str);
-	while (*str != '\0')
+	while (*str)
 	{
 		if (*str == *to_find)
 		{
 			i = 0;
-			while (to_find[i] != '\0')
-			{
-				if (str[i] != to_find[i])
-					break ;
+			while (to_find[i] != '\0' && str[i] == to_find[i])
 				i++;
-			}
 			if (to_find[i] == '\0')
 				return (str);
 		}
@@ -34,8 +30,8 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
-
-/*#include <stdio.h>
+/*
+#include <stdio.h>
 int main(void)
 {
 	char	str[] = "Warsaw";
