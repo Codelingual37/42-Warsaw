@@ -6,7 +6,7 @@
 /*   By: dajohnso <dajohnso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 14:20:38 by dajohnso          #+#    #+#             */
-/*   Updated: 2026/02/02 15:14:18 by dajohnso         ###   ########.fr       */
+/*   Updated: 2026/02/05 15:57:24 by dajohnso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
 /*
