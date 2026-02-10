@@ -6,9 +6,7 @@ int	ft_iterative_factorial(int nb)
 	result = nb;
 	second = nb - 1;
 	if (nb == 0)
-	{
 		return (1);
-	}
 	if (nb > 0)
 	{
 		while (second > 0)
